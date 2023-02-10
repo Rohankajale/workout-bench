@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "js-to-ts-converter": "^0.18.2"
+  }
+}

@@ -1,0 +1,89 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+#name{
+    margin-top: 1em;
+    margin-left: 1em;
+    font-size: 40px;
+    font-weight: 1000;
+    font-family: monospace;
+    display: flex;
+}
+
+.maincontainer{
+    font-size: 25px;
+    font-family: monospace;
+    margin-top: 2em;
+    margin-left: 2em;
+    padding: 1em;
+    width: 50rem;
+    border: 3px solid teal;
+    border-radius: 1em;
+    transition-duration: 0.4s; 
+}
+
+.workout{
+    border: 3px solid peachpuff;
+    background-color: seashell;
+    color: #1C1D21;
+    border-radius: 1em;
+    padding: 2em;
+    margin: 0.5em;
+    width: 200px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.controls{
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+    margin-left: auto;
+}
+
+#add{
+    font-size: 20px;
+    font-family: monospace;
+    border: 3px solid teal;
+    border-radius: 1em;
+    transition: all 0.07s ease;
+    transition-duration: 0.4s;
+    padding: 1em;
+}
+
+#add:hover{
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.24),
+                0 11px 50px 0 rgba(0, 0, 0, 0.19);
+    background-color: papayawhip;
+}
+
+#add:active{
+    box-shadow: 0 5px rgb(0, 174, 255);
+    transform: translateY(4px);
+}
+
+input {
+    display: block;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 0.5px solid grey;
+}
+
+.rmvbtndiv{
+    display: flex;
+    gap: 1em;
+}
+
+.rmvbtn{
+    width: 70%;
+    padding: 1em;
+    border-radius: 1em;
+    font-family: monospace;
+    font-size: medium;
+    font-weight: 500;
+}
