@@ -49,15 +49,15 @@ function submitClick() {
     inputArm.value = '';
     inputThumb.value = '';
 
-    const values = myWorkout[i].info().split(',');
-    const workoutDisp = document.createElement('div');
+    values = myWorkout[i].info().split(',');
+    workoutDisp = document.createElement('div');
     workoutDisp.classList.add('workout');
     workoutDisp.setAttribute('id',`th${i}`)
     values.forEach((value) => {
         workoutDisp.innerHTML += `${ value } <br> <br>`
     });
 
-    const rmvBtn = document.createElement('button');
+    rmvBtn = document.createElement('button');
     rmvBtn.classList.add('rmvbtn')
     rmvBtn.innerHTML = 'Remove Workout';
 
