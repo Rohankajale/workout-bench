@@ -18,7 +18,7 @@ let workoutCont = document.querySelector('.maincontainer');
 let myWorkout: any = [];
 let i = 0;
 
-function Workout(this: any, leg: any,arm: any,thumb: any)
+function Workout(this: any, leg: string,arm: string,thumb: string)
 {
     this.leg = leg;
     this.arm = arm;
@@ -37,7 +37,12 @@ function addWorkout(){
     inputs.appendChild(submit);
 }
 
-function submitClick() {
+interface Button<T> {
+    type?: 'addBtn' | 'submitClick' | 'rmvWorkout';
+}
+
+
+function submitClick(): typeof submitClick{
     if(inputLeg.value == '' || inputArm.value == '' || inputThumb.value == '') return;
 
 
@@ -72,15 +77,15 @@ function submitClick() {
     i++;
 }
 
-function rmvWorkout(e: any) {
+function rmvWorkout(e: any): typeof rmvWorkout{
     myWorkout.splice(e.target.parentElement.parentElement.id,1);
-    
     e.target.parentElement.parentElement.remove();
     e.target.parentElement.innerHTML = '';
     i--;
+    return;
 }
 
 submit.addEventListener('click', submitClick);
 
-const addBtn: any = document.querySelector('#add');
+const addBtn = document.querySelector('#add');
 addBtn.addEventListener('click', addWorkout);
