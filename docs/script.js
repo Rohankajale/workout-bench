@@ -6,9 +6,9 @@ let inputLoad = document.createElement('input');
 inputLoad.type = 'text';
 inputLoad.placeholder = 'Load';
 
-let inputThumb  = document.createElement('input');
-inputThumb.type = 'text';
-inputThumb.placeholder = 'Thumb'
+let inputReps  = document.createElement('input');
+inputReps.type = 'text';
+inputReps.placeholder = 'Reps'
 
 let submit = document.createElement('input');
 submit.classList.add('sub');
@@ -18,14 +18,14 @@ let workoutCont = document.querySelector('.maincontainer');
 let myWorkout = [];
 let i = 0;
 
-function Workout(leg,load,thumb)
+function Workout(leg,load,reps)
 {
     this.leg = leg;
     this.load = load;
-    this.thumb = thumb;
+    this.reps = reps;
 
     this.info = function() {
-        return leg + ',' + load + ',' + thumb;
+        return leg + ',' + load + ',' + reps;
     }
 }
 
@@ -33,21 +33,21 @@ let inputs = document.querySelector("#addInputs")
 function addWorkout(){
     inputs.appendChild(inputLeg);
     inputs.appendChild(inputLoad);
-    inputs.appendChild(inputThumb);
+    inputs.appendChild(inputReps);
     inputs.appendChild(submit);
 }
 
 function submitClick() {
-    if(inputLeg.value == '' || inputLoad.value == '' || inputThumb.value == '') return;
+    if(inputLeg.value == '' || inputLoad.value == '' || inputReps.value == '') return;
 
 
-    let workout  = new Workout(inputLeg.value,inputLoad.value,inputThumb.value);
+    let workout  = new Workout(inputLeg.value,inputLoad.value,inputReps.value);
     myWorkout.push(workout);
     
     inputs.innerHTML = '';
     inputLeg.value = '';
     inputLoad.value = '';
-    inputThumb.value = '';
+    inputReps.value = '';
 
     values = myWorkout[i].info().split(',');
     workoutDisp = document.createElement('div');
